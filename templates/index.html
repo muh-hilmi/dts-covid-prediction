@@ -122,8 +122,12 @@ _<!DOCTYPE html>
                 <h1 class="text-2xl mb-8">
                     Prediksi Pasien Covid-19
                 </h1>
-                <h2 class="text-5xl font-bold">Hasil =  {{ predict_covid }}</h2>
-                {% if (predict_covid) != 0 %}
+                {% if (predict_covid) == 0 %}
+                <h2 class="text-5xl font-bold">Hasil =  buruk </h2>
+                {% endif %}
+                {% if (predict_covid) == 1 %}
+                <h2 class="text-5xl font-bold">Hasil =  baik </h2>
+                {% endif %}
                 <div class="mt-8">
                     <p>Usia: {{ age }} tahun</p>
                     <p>Alat bantu nafas: {{ intubed }}</p>
@@ -131,7 +135,6 @@ _<!DOCTYPE html>
                     <p>Riwayat Hipertensi: {{ hypertension }}</p>
                     <p>Riwayat Diabetes: {{ diabetes }}</p>
                 </div>
-                {% endif %}
             </div>
             <div class="flex justify-around bg-white p-16 rounded-lg mt-8">
                 <img
