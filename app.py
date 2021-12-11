@@ -22,24 +22,24 @@ def predict():
 
     data.append(int(age))
     if intubed == 'Ya':
-        data.extend([0, 1])
+        data.extend(1)
     else:
-        data.extend([1, 0])
+        data.extend(0)
 
     if pneumonia == 'Ya':
-        data.extend([0, 1])
+        data.extend(1)
     else:
-        data.extend([1, 0])
+        data.extend(0)
         
     if diabetes == 'Ya':
-        data.extend([0, 1])
+        data.extend(1)
     else:
-        data.extend([1, 0])
+        data.extend(0)
         
     if hypertension == 'Ya':
-        data.extend([0, 1])
+        data.extend(1)
     else:
-        data.extend([1, 0])
+        data.extend(0)
     
     prediction = model.predict([data])
     output = round(prediction[0], 2)
