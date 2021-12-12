@@ -20,16 +20,17 @@ def predict():
 
     data = []
 
-    data.append(int(age))
     if intubed == 'Ya':
         data.append(1.0)
     else:
         data.append(0.0)
-
+    
     if pneumonia == 'Ya':
         data.append(1.0)
     else:
         data.append(0.0)
+    
+    data.append(int(age))
         
     if diabetes == 'Ya':
         data.append(1.0)
