@@ -53,10 +53,10 @@ _<!DOCTYPE html>
                     <option value="Tidak">Tidak</option>
                 </select>
 
-                <label for="pneunomia" class="mt-4 mb-2">Riwayat pneunomia?</label>
+                <label for="pneumonia" class="mt-4 mb-2">Riwayat pneumonia?</label>
                 <select
-                    name="pneunomia"
-                    id="pneunomia"
+                    name="pneumonia"
+                    id="pneumonia"
                     class="p-4 bg-gray-100 rounded-md"
                 >
                     <option value="Ya">Ya</option>
@@ -122,16 +122,16 @@ _<!DOCTYPE html>
                 <h1 class="text-2xl mb-8">
                     Prediksi Pasien Covid-19
                 </h1>
-                {% if (predict_covid) == 1 %}
-                <h2 class="text-5xl font-bold">Hasil =  buruk </h2>
-                {% endif %}
                 {% if (predict_covid) == 0 %}
                 <h2 class="text-5xl font-bold">Hasil =  baik </h2>
+		{% endif %}
+		{% if (predict_covid) == 1 %}
+                <h2 class="text-5xl font-bold">Hasil =  buruk </h2>
                 {% endif %}
                 <div class="mt-8">
                     <p>Usia: {{ age }} tahun</p>
                     <p>Alat bantu nafas: {{ intubed }}</p>
-                    <p>Riwayat Pneunomia: {{ pneunomia }}</p>
+                    <p>Riwayat Pneunomia: {{ pneumonia }}</p>
                     <p>Riwayat Hipertensi: {{ hypertension }}</p>
                     <p>Riwayat Diabetes: {{ diabetes }}</p>
                 </div>
