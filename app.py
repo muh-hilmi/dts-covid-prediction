@@ -42,9 +42,8 @@ def predict():
         data.extend(0)
     
     prediction = model.predict([data])
-    output = round(prediction[0], 2)
 
-    return render_template('index.html', predict_covid=output, intubed=intubed, pneumonia=pneumonia, diabetes=diabetes, hypertension=hypertension)
+    return render_template('index.html', predict_covid=predict, intubed=intubed, pneumonia=pneumonia, diabetes=diabetes, hypertension=hypertension)
 
 
 if __name__ == '__main__':
