@@ -8,6 +8,7 @@ _<!DOCTYPE html>
             href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
             rel="stylesheet"
         />
+	<link rel=”icon” href=”logodikti.png”>
         <title>Aplikasi Prediksi Pasien Covid-19</title>
     </head>
     <body
@@ -129,7 +130,7 @@ _<!DOCTYPE html>
 		{% endif %}
 		{% if (predict_covid) == 1 %}
                 <h2 class="text-5xl font-bold"
-		    style="color:green"
+		    style="color:red"
 		    >Pasien membutuhkan medis prioritas</h2>
                 {% endif %}
                 <div class="mt-8">
@@ -149,10 +150,10 @@ _<!DOCTYPE html>
                 <img
                     class="h-14 md:h-18"
                     src="https://public.spadadikti.id/assets/img/logo-kemendikbuddikti.svg"
-                    alt="logo-kominfo"
+                    alt="logo-dikti"
                 />
 		<div class="mt-8">
-		<p class="text-3xl font-bold mb-8">Dibuat oleh Peserta Associate Data Science yang diselenggarakan oleh DIKTI</p>
+		<p>Dibuat oleh Peserta Associate Data Science - DIKTI</p>
 		<p>Fiona Felica (Universitas Padjadjaran)</p>
 		<p>Muh Hilmi Izzulhaq (Telkom University)</p>
 		<p>Sabila Sharfina (Universitas Padjadjaran)</p>
