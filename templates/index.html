@@ -8,7 +8,7 @@
             href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
             rel="stylesheet"
         />
-	<link rel=”icon” href=”logo-dikti.png”>
+	<link rel="icon" href="logo-dikti.png">
         <title>Aplikasi Prediksi Pasien Covid-19</title>
     </head>
     <body
@@ -126,13 +126,13 @@
                 </h1>
                 {% if (predict_covid) == 0 %}
                 <h2 class="text-5xl font-bold"
-		    style="color:green"
-		    >Pasien diprediksi akan baik saja</h2>
-		{% endif %}
-		{% if (predict_covid) == 1 %}
+		            style="color:green"
+		        >Pasien diprediksi akan baik saja</h2>
+		        {% endif %}
+		        {% if (predict_covid) == 1 %}
                 <h2 class="text-5xl font-bold"
-		    style="color:red"
-		    >Pasien membutuhkan medis prioritas</h2>
+		            style="color:yellow"
+		        >Pasien membutuhkan medis prioritas</h2>
                 {% endif %}
                 <div class="mt-8">
                     <p>Usia: {{ age }} tahun</p>
@@ -145,20 +145,20 @@
             <div class="flex justify-around bg-white p-16 rounded-lg mt-8">
                 <img
                     class="h-14 md:h-18"
-                    src="http://lldikti10.ristekdikti.go.id/id/asset/foto_berita/MASTER.png"
+                    src="https://kaswanto.staff.ipb.ac.id/files/2021/05/LogoKampusMerdekaBlog-768x409.png"
                     alt="logo-kampusmerdeka"
                 />
                 <img
                     class="h-14 md:h-18"
-                    src="https://public.spadadikti.id/assets/img/logo-kemendikbuddikti.svg"
+                    src="logo-dikti.png"
                     alt="logo-dikti"
                 />
-		<div class="mt-8">
-		<p>Dibuat oleh Peserta Associate Data Science - DIKTI</p>
-		<p>Fiona Felica (Universitas Padjadjaran)</p>
-		<p>Muh Hilmi Izzulhaq (Telkom University)</p>
-		<p>Sabila Sharfina (Universitas Padjadjaran)</p>
-		</div>
+		        <div>
+		            <h6 class="text-xl">Dibuat oleh Peserta Associate Data Science - DIKTI</h6>
+		            <p>Fiona Felica (Universitas Padjadjaran)</p>
+		            <p>Muh Hilmi Izzulhaq (Telkom University)</p>
+		            <p>Sabila Sharfina (Universitas Padjadjaran)</p>
+		        </div>
             </div>
         </section>
     </body>
