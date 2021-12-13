@@ -123,10 +123,14 @@ _<!DOCTYPE html>
                     Prediksi Pasien Covid-19
                 </h1>
                 {% if (predict_covid) == 0 %}
-                <h2 class="text-5xl font-bold">Hasil =  baik </h2>
+                <h2 class="text-5xl font-bold"
+		    style="color:green"
+		    >Pasien diprediksi akan baik saja</h2>
 		{% endif %}
 		{% if (predict_covid) == 1 %}
-                <h2 class="text-5xl font-bold">Hasil =  buruk </h2>
+                <h2 class="text-5xl font-bold"
+		    style="color:green"
+		    >Pasien membutuhkan medis prioritas</h2>
                 {% endif %}
                 <div class="mt-8">
                     <p>Usia: {{ age }} tahun</p>
@@ -147,6 +151,10 @@ _<!DOCTYPE html>
                     src="https://public.spadadikti.id/assets/img/logo-kemendikbuddikti.svg"
                     alt="logo-kominfo"
                 />
+		<p class="text-3xl font-bold mb-8">Dibuat oleh Peserta Associate Data Science yang diselenggarakan oleh DIKTI</p>
+		<p>Fiona Felica (Universitas Padjadjaran)</p>
+		<p>Muh Hilmi Izzulhaq (Telkom University)</p>
+		<p>Sabila Sharfina (Universitas Padjadjaran)</p>
             </div>
         </section>
     </body>
