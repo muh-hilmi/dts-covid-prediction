@@ -8,9 +8,17 @@
             href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
             rel="stylesheet"
         />
-	<link rel="icon" href="logo-dikti.png">
+	<link rel="icon" href="https://public.spadadikti.id/assets/img/logo-kemendikbuddikti.svg">
         <title>Aplikasi Prediksi Pasien Covid-19</title>
     </head>
+    <style>
+        .row{
+            display: flex;
+        }
+        .row{
+            flex: 50%;
+        }
+    </style>
     <body
         class="
             flex flex-col
@@ -142,23 +150,27 @@
                     <p>Riwayat Diabetes: {{ diabetes }}</p>
                 </div>
             </div>
-            <div class="flex justify-around bg-white p-16 rounded-lg mt-8">
+            <div class="bg-white p-16 rounded-lg mt-8">
+                <div class="row">
                 <img
-                    class="h-14 md:h-18"
-                    src="https://kaswanto.staff.ipb.ac.id/files/2021/05/LogoKampusMerdekaBlog-768x409.png"
+                    class="h-24 md:h-28"
+                    style="border:0px; width:180px; height:100px;"
+                    src="http://fe.mercubuana-yogya.ac.id/wp-content/uploads/2021/08/Screen-Shot-2020-09-30-at-23.26.54.png"
                     alt="logo-kampusmerdeka"
                 />
                 <img
-                    class="h-14 md:h-18"
-                    src="logo-dikti.png"
+                    class="h-24 md:h-28"
+                    style="border:0px; width:200px; height:100px;"
+                    src="https://public.spadadikti.id/assets/img/logo-kemendikbuddikti.svg"
                     alt="logo-dikti"
                 />
-		<div>
-		<h6 class="text-xl">Dibuat oleh Peserta Associate Data Science - DIKTI</h6>
-		<p>Fiona Felica (Universitas Padjadjaran)</p>
-		<p>Muh Hilmi Izzulhaq (Telkom University)</p>
-		<p>Sabila Sharfina (Universitas Padjadjaran)</p>
-		</div>
+                </div>
+		        <div>
+		            <h6 class="text-xl font-bold">Dibuat oleh Peserta Associate Data Science - DIKTI</h6>
+		            <p>Fiona Felica (Universitas Padjadjaran)</p>
+		            <p>Muh Hilmi Izzulhaq (Telkom University)</p>
+		            <p>Sabila Sharfina (Universitas Padjadjaran)</p>
+		        </div>
             </div>
         </section>
     </body>
