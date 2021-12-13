@@ -41,6 +41,5 @@ Data yang digunakan mengandung 23 atribut dan 566.602 baris. Tetapi pada project
 
 ## Keterangan
 1 = YA  ;   2 = TIDAK   ;     97,98,99 = MISSING VALUE
-Predict Variable : status(Y) = apakah pasien teridentifikasi meninggal atau tidak ?
-1 = iya ; 0 = tidak
+Predict Variable : status(Y) = apakah pasien teridentifikasi meninggal atau tidak ? dengan kategori 1 = iya dan 0 = tidak
 Diperoleh dari kolom "date_died" dengan membuat kolom baru untuk status pasien apakah meninggal (buruk) atau tidak (baik).Jika pada kolom date_died teridentifikasi tanggal meninggalnya maka pasien teridentifikasi sebagai meninggal dan sebaliknya pada variabel y.
