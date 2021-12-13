@@ -8,7 +8,7 @@
             href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
             rel="stylesheet"
         />
-	<link rel="icon" href="http://fe.mercubuana-yogya.ac.id/wp-content/uploads/2021/08/Screen-Shot-2020-09-30-at-23.26.54.png">
+	<link rel="icon" href="../templates/logodikti.png">
         <title>Aplikasi Prediksi Pasien Covid-19</title>
     </head>
     <style>
@@ -134,12 +134,12 @@
                 </h1>
                 {% if (predict_covid) == 0 %}
                 <h2 class="text-5xl font-bold"
-		            style="color:green"
+		            style="color:yellowgreen"
 		        >Pasien diprediksi akan baik saja</h2>
 		        {% endif %}
 		        {% if (predict_covid) == 1 %}
                 <h2 class="text-5xl font-bold"
-		            style="color:yellow"
+		            style="color:orange"
 		        >Pasien membutuhkan medis prioritas</h2>
                 {% endif %}
                 <div class="mt-8">
