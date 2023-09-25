@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+	<link rel="icon" type="image/png" size="32x32" href="../statics/images/logo-dikti.png">
+        <title>Aplikasi Prediksi Pasien Covid-19</title>
+    </head>
+    <style>
+        .row{
+            display: flex;
+        }
+        .column{
+            flex: 50%;
+        }
+    </style>
+    <body
+        class="
+            flex flex-col
+            justify-between
+            item-center
+            p-8
+            min-h-screen
+            bg-gradient-to-r
+            from-yellow-400
+            to-green-500
+            text-gray-800
+            md:flex-row
+        "
+    >
+        <main class="bg-white p-16 rounded-lg">
+	    <h6 class="font-bold">Kelompok 2</h6>
+            <h1 class="text-3xl font-bold mb-8">
+                Prediksi Harapan Hidup Pasien Covid-19:
+            </h1>
+
+            <form
+                action="{{ url_for('predict') }}"
+                method="post"
+                class="flex flex-col"
+            >
+                <label for="age" class="mb-2">Usia</label>
+                <input
+                    type="text"
+                    name="age"
+                    placeholder="age"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="intubed" class="mt-4 mb-2">Alat bantu nafas?</label>
+                <select
+                    name="intubed"
+                    id="intubed"
+                    class="p-4 bg-gray-100 rounded-md"
+                >
+                    <option value="Ya">Ya</option>
+                    <option value="Tidak">Tidak</option>
+                </select>
+
+                <label for="pneumonia" class="mt-4 mb-2">Riwayat pneumonia?</label>
+                <select
+                    name="pneumonia"
+                    id="pneumonia"
+                    class="p-4 bg-gray-100 rounded-md"
+                >
+                    <option value="Ya">Ya</option>
+                    <option value="Tidak">Tidak</option>
+                </select>
+
+                <label for="hypertension" class="mt-4 mb-2">Riwayat Hipertensi?</label>
+                <select
+                    name="hypertension"
+                    id="hypertension"
+                    class="p-4 bg-gray-100 rounded-md"
+                >
+                    <option value="Ya">Ya</option>
+                    <option value="Tidak">Tidak</option>
+                </select>
+
+                <label for="diabetes" class="mt-4 mb-2">Riwayat diabetes?</label>
+                <select
+                    name="diabetes"
+                    id="diabetes"
+                    class="p-4 bg-gray-100 rounded-md"
+                >
+                    <option value="Ya">Ya</option>
+                    <option value="Tidak">Tidak</option>
+                </select>
+
+                <button
+                    type="submit"
+                    class="
+                        flex
+                        justify-center
+                        align-center
+                        mt-8
+                        p-4
+                        bg-gradient-to-r
+                        from-yellow-400
+                        to-green-500
+                        text-white
+                        rounded-md
+                    "
+                >
+                    PREDIKSI SEKARANG
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-arrow-right ml-4"
+                    >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </form>
+        </main>
+        <section class="mt-8 h-full flex-auto rounded-lg md:mt-0 md:ml-8">
+            <div class="bg-white p-16 rounded-lg">
+                <h1 class="text-2xl font-bold mb-8">
+                    Prediksi Pasien Covid-19
+                </h1>
+                {% if (predict_covid) == 0 %}
+                <h2 class="text-5xl font-bold"
+		            style="color:yellowgreen"
+		        >Pasien diprediksi akan baik saja</h2>
+		        <!-- {% endif %} -->
+		        {% if (predict_covid) == 1 %}
+                <h2 class="text-5xl font-bold"
+		            style="color:orange"
+		        >Pasien membutuhkan medis prioritas</h2>
+                {% endif %}
+                <div class="mt-8">
+                    <p>Usia: {{ age }} tahun</p>
+                    <p>Alat bantu nafas: {{ intubed }}</p>
+                    <p>Riwayat Pneunomia: {{ pneumonia }}</p>
+                    <p>Riwayat Hipertensi: {{ hypertension }}</p>
+                    <p>Riwayat Diabetes: {{ diabetes }}</p>
+                </div>
+            </div>
+            <div class="bg-white p-16 rounded-lg mt-8">
+                <div class="row">
+                <img
+                    class="h-24 md:h-28"
+                    style="border:0px; width:180px; height:100px;"
+                    src="http://fe.mercubuana-yogya.ac.id/wp-content/uploads/2021/08/Screen-Shot-2020-09-30-at-23.26.54.png"
+                    alt="logo-kampusmerdeka"
+                />
+                <img
+                    class="h-24 md:h-28"
+                    style="border:0px; width:200px; height:100px;"
+                    src="https://public.spadadikti.id/assets/img/logo-kemendikbuddikti.svg"
+                    alt="logo-dikti"
+                />
+                </div>
+		        <div>
+		            <h6 class="text-xl font-bold">Dibuat oleh Peserta Associate Data Science - DIKTI</h6>
+			    <p class="font-bold">Host : Institut Teknologi Bandung - 03</p>
+		            <p>Fiona Felica (Universitas Padjadjaran)</p>
+		            <p>Muh Hilmi Izzulhaq (Telkom University)</p>
+		            <p>Sabila Sharfina (Universitas Padjadjaran)</p>
+		        </div>
+            </div>
+        </section>
+    </body>
+</html>
